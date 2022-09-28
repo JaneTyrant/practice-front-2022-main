@@ -1,0 +1,121 @@
+@use '../../../common/style/grid';
+@use '../../../common/style/breakpoints' as *;
+@import "../../../common/style/template";
+
+.section {
+    margin: 100px 1rem;
+
+    text-align: center;
+}
+
+.heading {
+    font-size: 32px;
+    line-height: 1.2;
+
+    &_link {
+        max-width: 500px;
+
+        color: #343a40;
+
+        text-transform: capitalize;
+        text-decoration: none;
+
+        @extend %row-overflow;
+    }
+}
+
+.heading,
+.subheading,
+.description {
+    margin: auto
+}
+
+.subheading {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.subheading,
+.description {
+    @extend %rows-overflow;
+}
+
+.description {
+    margin-bottom: 50px;
+
+    color: #77838f;
+}
+
+.article {
+    box-sizing: border-box;
+    padding: 18px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    margin: 8px 15px;
+
+    text-align: left;
+
+    &_img {
+        display: inline-block;
+        width: 30px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+
+    &_heading {
+        display: inline-block;
+        max-width: 250px;
+
+        line-height: 2em;
+
+        &_span {
+            @extend %rows-overflow;
+        }
+    }
+
+    &_content {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.7em;
+        font-weight: 400;
+        color: #77838f;
+
+        @extend %rows-overflow;
+    }
+}
+
+.learn-more-link {
+    display: block;
+    max-width: 300px;
+    padding: 12px 16px;
+    border: 1px solid #007bff;
+    border-radius: 0.25rem;
+    margin: auto;
+    margin-top: 50px;
+    
+    color: #007bff;
+    background-color: transparent;
+    background-image: none;
+
+    transition: all .2s ease-in-out;
+
+    text-transform: capitalize;
+    text-decoration: none;
+
+    @extend %row-overflow;
+
+    &:hover {
+        color: #ffffff;
+        background-color: #007bff;
+        border-color: #007bff;
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+    }
+}
+
+@media screen and (min-width: $md) {
+    .subheading,
+    .description {
+        width: 80%;
+    }
+}
