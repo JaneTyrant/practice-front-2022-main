@@ -1,0 +1,15 @@
+%rows-overflow {
+    --row-size: 5;
+    display: -webkit-box;
+    -webkit-line-clamp: var(--row-size);
+    -webkit-box-orient: vertical;
+    max-height: calc(1.5rem*var(--row-size));
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+%row-overflow {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

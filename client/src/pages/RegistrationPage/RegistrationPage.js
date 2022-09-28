@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Logo from '../../components/Logo';
 import RegistrationForm
-  from '../../components/RegistrationForm/RegistrationForm';
+  from '../../components/forms/RegistrationForm';
 import styles from './RegistrationPage.module.sass';
 import { clearErrorSignUpAndLogin } from '../../actions/actionCreator';
 import CONSTANTS from '../../constants';
@@ -162,7 +162,7 @@ message
               </span>
               . For assistance
               with launching a contest,
-              you can also call us at (877) 355-3585 or schedule a
+              you can also call us at {CONSTANTS.CONTACTS.PHONE} or schedule a
               <span
                 className={styles.orangeSpan}
               >
