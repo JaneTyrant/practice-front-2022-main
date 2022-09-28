@@ -1,15 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Field, Form, Formik } from 'formik';
-import Error from '../Error/Error';
-import { authActionRegister, clearAuth } from '../../actions/actionCreator';
+import Error from '../../Error/Error';
+import { authActionRegister, clearAuth } from '../../../actions/actionCreator';
 import styles from './RegistrationForm.module.sass';
-import FormInput from '../FormInput/FormInput';
-import RoleInput from '../RoleInput/RoleInput';
+import FormInput from '../FormInput';
+import RoleInput from '../../RoleInput/RoleInput';
 import AgreeTermOfServiceInput
-  from '../AgreeTermOfServiceInput/AgreeTermOfServiceInput';
-import CONSTANTS from '../../constants';
-import Schems from '../../validators/validationSchems';
+  from '../../AgreeTermOfServiceInput/AgreeTermOfServiceInput';
+import CONSTANTS from '../../../constants';
+import Schems from '../../../validators/validationSchems';
 
 class RegistrationForm extends React.Component {
   componentWillUnmount() {

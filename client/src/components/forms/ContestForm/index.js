@@ -2,17 +2,17 @@ import React from 'react';
 import { Form, Formik } from 'formik';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import CONSTANTS from '../../constants';
-import { getDataForContest } from '../../actions/actionCreator';
+import CONSTANTS from '../../../constants';
+import { getDataForContest } from '../../../actions/actionCreator';
 import styles from './ContestForm.module.sass';
-import Spinner from '../Spinner/Spinner';
-import FormInput from '../FormInput/FormInput';
-import SelectInput from '../SelectInput/SelectInput';
-import FieldFileInput from '../InputComponents/FieldFileInput/FieldFileInput';
-import FormTextArea from '../InputComponents/FormTextArea/FormTextArea';
-import TryAgain from '../TryAgain/TryAgain';
-import Schems from '../../validators/validationSchems';
-import OptionalSelects from '../OptionalSelects/OptionalSelects';
+import Spinner from '../../Spinner/Spinner';
+import FormInput from '../FormInput';
+import SelectInput from '../../SelectInput/SelectInput';
+import FieldFileInput from '../../InputComponents/FieldFileInput/FieldFileInput';
+import FormTextArea from '../../InputComponents/FormTextArea/FormTextArea';
+import TryAgain from '../../TryAgain/TryAgain';
+import Schems from '../../../validators/validationSchems';
+import OptionalSelects from '../../OptionalSelects/OptionalSelects';
 
 const variableOptions = {
   [CONSTANTS.NAME_CONTEST]: {
@@ -48,6 +48,8 @@ class ContestForm extends React.Component {
           this.props.getData({ characteristic1: 'brandStyle' });
           break;
         }
+        default:
+          return;
       }
     }
 
